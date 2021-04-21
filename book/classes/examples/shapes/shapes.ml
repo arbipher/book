@@ -56,7 +56,7 @@ class circle r x y = object
     let dx = abs (x' - x) in
     let dy = abs (y' - y) in
     let dist = sqrt (Float.of_int ((dx * dx) + (dy * dy))) in
-    dist <= (Float.of_int radius)
+    Float.(dist <= (of_int radius))
 end
 
 [@@@part "3"] ;;
